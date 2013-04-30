@@ -20,6 +20,11 @@ class CommentsControllerTest < ActionController::TestCase
       should "give a http 200" do
         assert_response :success     
       end 
+
+      # contect "An AJAX request to create" do
+
+
+
     end
   end
 end

@@ -5,6 +5,22 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoq442HK7KTs93L4yBtjs1Sb8evEPpWIE&sensor=false">
+  </script>
+  <script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      center: new google.maps.LatLng(40.7509915, -73.9888797),
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map-canvas"),
+      mapOptions);
+
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 </head>
 <body>
 

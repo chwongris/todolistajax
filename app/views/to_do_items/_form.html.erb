@@ -1,11 +1,16 @@
 <div class="new-item">
 
 
-<%= form_for ToDoItem.new, :remote => true do |f| %>
+<%= form_for ToDoItem.new(:destination_id => destination), :remote => true do |f| %>
 
+<%= f.hidden_field :destination_id %>
 
 <div class="textfield">
 <%= f.text_area :name %>
+</div>
+
+<div class="textfield">
+<%= f.text_area :location %>
 </div>
 
 <div class="fieldsubmit">

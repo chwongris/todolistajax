@@ -7,7 +7,8 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @comment.save!
-    render @comment
+    render :partial => 'comments/comment', :locals => {:comment => @comment}, :content_type => 'text/html'
+    # render :template => 'comments/create', :locals => {:comment => @comment}, :content_type => 'text/javascript'
   end
 
 end

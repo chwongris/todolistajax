@@ -3,7 +3,7 @@
 <div class ="info">
   <%= distance_of_time_in_words(Time.now, to_do_item.created_at) %> ago
 </div>
-<div class="comments">
+<div class="comments"> 
 <div class="comments-<%=to_do_item.id%>">
   <% to_do_item.comments.each do |comment| %>
 

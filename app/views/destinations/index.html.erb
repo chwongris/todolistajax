@@ -1,0 +1,12 @@
+<h1>Destinations</h1>
+
+<div id="map-canvas">
+  </div>
+
+<%= render :partial => 'destinations/form' %>
+
+<% @destinations.reverse.each do |i| %>
+  <%= render i %>
+<% end %>
+
+

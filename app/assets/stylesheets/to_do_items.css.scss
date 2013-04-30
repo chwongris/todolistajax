@@ -2,13 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .todo-item {
-background-color: grey;
-margin-top: 20px;
+background-color: #E6E6E6;
+margin-top: 25px;
 margin-bottom: 20px;
 font-family: Arial;
-font-size:30px;
+font-size:25px;
+padding-left:20px;
+padding-top:4px;
 }
 
 .info{
-  font-size:15px;
+  font-size:12px;
+  margin-bottom: 20px;
+}
+
+#to_do_item_name{
+  height: 30px;
 }
