@@ -1,0 +1,1 @@
+$(".to_do_items-<%=@item.destination_id%>").append("<%= escape_javascript(render :partial => 'to_do_items/to_do_item', :locals => {:to_do_item => @item}) %>");

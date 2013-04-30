@@ -14,7 +14,7 @@ class ToDoItemsController < ApplicationController
     @item = ToDoItem.new(params[:to_do_item])
     # binding.pry
     @item.save!
-    render @item
+    render :template => 'to_do_items/create', :content_type => 'text/javascript'
   end
 
 end

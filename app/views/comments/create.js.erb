@@ -1,1 +1,1 @@
-// ("#comments").append("<%= escape_javascript(render :partial => 'comments/comment', :locals => {:comment => @comment}) %>");
+$(".comments-<%=@comment.to_do_item_id%>").append("<%= escape_javascript(render :partial => 'comments/comment', :locals => {:comment => @comment}) %>");
