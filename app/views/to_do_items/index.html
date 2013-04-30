@@ -1,0 +1,7 @@
+<h1>Todo</h1>
+
+<%= render :partial => 'to_do_items/form' %>
+
+<% @items.reverse.each do |i| %>
+  <%= render i %>
+<% end %>

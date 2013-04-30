@@ -1,3 +1,14 @@
 // Place all the styles related to the ToDoItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.todo-item {
+background-color: grey;
+margin-top: 20px;
+margin-bottom: 20px;
+font-family: Arial;
+font-size:30px;
+}
+
+.info{
+  font-size:15px;
+}

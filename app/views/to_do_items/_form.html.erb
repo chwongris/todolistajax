@@ -1,0 +1,17 @@
+<div class="new-item">
+
+
+<%= form_for ToDoItem.new, :remote => true do |f| %>
+
+
+<div class="textfield">
+<%= f.text_area :name %>
+</div>
+
+<div class="fieldsubmit">
+<%= f.submit %>
+</div>
+
+<% end %>
+
+</div>
