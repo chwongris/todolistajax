@@ -1,10 +1,18 @@
 Todolist::Application.routes.draw do
   
-resources :comments, :only => :create
-resources :to_do_items, :only => [:index, :show, :create]
-resources :destinations, :only => [:index, :show, :create]
+  resources :comments, :only => :create
+  resources :destinations, :only => [:index, :show, :create] do
+   collection do
+    post :update_position
+  end
+end
+  resources :to_do_items, :only => [:index, :show, :create] do
+    member do
+      post :like
+    end
+  end
 
-
+  root :to => 'destinations#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

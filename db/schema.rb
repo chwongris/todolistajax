@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130430164005) do
+ActiveRecord::Schema.define(:version => 20130507041239) do
 
   create_table "comments", :force => true do |t|
     t.text     "body"
@@ -24,17 +24,34 @@ ActiveRecord::Schema.define(:version => 20130430164005) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "position"
+  end
+
+  create_table "likes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "to_do_item_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "to_do_items", :force => true do |t|
     t.string   "name"
     t.boolean  "completed"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "location"
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "destination_id"
+    t.integer  "user_id"
+    t.integer  "postition",      :default => 0
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

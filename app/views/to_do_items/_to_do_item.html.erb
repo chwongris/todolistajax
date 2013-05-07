@@ -1,19 +1,24 @@
-<div class="todo-item <%= to_do_item.completed? ? 'completed' : '' %>">
-<%= to_do_item.name %>
+<div class="to_do_item">
+
+<div class="to_do_item_name">
+<%= to_do_item.name %>    
+<%= link_to image_tag('bump.jpg', :width => 16, :height => 16), like_to_do_item_path(to_do_item.id), :remote => true, :method => :post %>
+</div>
+
 <div class ="info">
-  <%= distance_of_time_in_words(Time.now, to_do_item.created_at) %> ago
+  Added <%= distance_of_time_in_words(Time.now, to_do_item.created_at) %> ago
 </div>
+
 <div class="comments"> 
-<div class="comments-<%=to_do_item.id%>">
-
-  <% to_do_item.comments.each do |comment| %>
-
-  <%= render comment %>
-  <% end %>
-</div>
-</div>
+  <div class="comments-<%=to_do_item.id%>">
+    <% to_do_item.comments.each do |comment| %>
+    <%= render comment %>
+    <% end %>
+  </div>
 
 
+<div class="new-comment">
 <%= render :partial => 'comments/form', :locals => {:item => to_do_item.id} %>
-
+</div>
+</div>
 </div>

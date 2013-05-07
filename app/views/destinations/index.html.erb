@@ -1,12 +1,21 @@
+
+<div id="googlemap">
+<div id="map-canvas">
+</div>
+</div>
+
+<div id="mainpage">
 <h1>Destinations</h1>
 
-<div id="map-canvas">
-  </div>
-
-<%= render :partial => 'destinations/form' %>
-
-<% @destinations.reverse.each do |i| %>
+<div id="sort_links">
+<%= link_to 'Sort A-Z', destinations_path(:order => :name), :remote => :true %> |
+<%= link_to 'Sort Z-A', destinations_path(:order => :"name desc"), :remote => :true %>
+</div>
+<div class="destinations">
+<% @destinations.each do |i| %>
   <%= render i %>
 <% end %>
-
+</div>
+<%= render :partial => 'destinations/form' %>
+</div>
 

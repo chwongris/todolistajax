@@ -7,6 +7,8 @@ class ToDoItem < ActiveRecord::Base
   after_validation :geocode
 
   has_many :comments
+  has_many :likes
+  belongs_to :user
   belongs_to :destination
 
   def my_cool_geocoding_method

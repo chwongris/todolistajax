@@ -7,6 +7,9 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
+gem 'json'
+gem 'jquery-ui-rails'
+
 group :test do
   gem 'shoulda'
 end

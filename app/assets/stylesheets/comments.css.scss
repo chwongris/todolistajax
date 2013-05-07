@@ -8,9 +8,23 @@
 }
 
 .comments{
-  float:right;
-  font-size: 12px;
+  // float:right;
+  // font-size: 12px;
   position: relative;
-  top: -40px;
-  margin-right: 10px;
+  top: 40%;
+  // margin-right: 10px;
+  // margin-left: 50px;
+    display:none;
+}
+
+.comment{
+  // margin-left:500px;
+  // background-color: black;
+
+}
+
+.new-comment{
+  // margin-left:350px;
+  // background-color: black;
+  // display:none;
 }

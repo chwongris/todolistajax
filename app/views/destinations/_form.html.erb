@@ -1,16 +1,12 @@
 <div class="new-destination">
 
-
 <%= form_for Destination.new, :remote => true do |f| %>
 
-
-
 <div class="textfield">
-<%= f.text_area :name %>
+<%= f.text_area :name, :placeholder => "Add a City...",:class => "destination_field" %>
 </div>
 
-
-<div class="fieldsubmit">
+<div class="destinationfieldsubmit">
 <%= f.submit %>
 </div>
 

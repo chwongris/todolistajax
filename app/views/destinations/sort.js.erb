@@ -1,0 +1,7 @@
+$('.destinations').html("");
+
+<% destinations.each do |d| %>
+
+  $('.destinations').append('<%= escape_javascript(render d) %>');
+
+<% end %>

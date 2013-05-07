@@ -2,6 +2,100 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #map-canvas{
-  height:400px;
-  width: 400px;
+  height:100%;
+  width: 100%;
+}
+
+#googlemap{
+  height:100%;
+  width: 40%;
+  display: inline-block;
+  position: fixed;
+  right: 0px;
+  top: 70px;
+}
+
+
+#header{
+height:70px;
+width: 100%;
+background-color: black;
+background-size: 200px;
+position: fixed;
+top:0px;
+
+}
+
+* {
+ font-family: 'Jacques Francois', sans-serif;
+}
+
+body{
+  margin: 0;
+  height: 100%;
+}
+
+html{
+  height: 100%;
+}
+
+h1#logo {
+  color: white;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  padding-left:30px;
+  padding-top:15px;
+  height: 65px;
+}
+
+.destination_name{
+  height:50px;
+  width: 320px;
+  background-color: #780000 ;
+  padding-left: 30px;
+  padding-top:10px;
+  margin-left: 5px;
+  color: white;
+  font-size: 20px;
+  border: 5px solid white;
+  
+}
+
+.destination_field{
+  padding-left: 30px;
+  padding-top:10px;
+  width: 320px;
+   height: 50px;
+   margin-left: 5px;
+   border: 5px solid white;
+   background-color: #F00000 ;
+     color: white;
+  font-size: 20px;
+   resize: none;
+}
+
+.destination_field:focus{
+  outline: #F00000 solid thin;
+}
+
+.destinationfieldsubmit{
+  margin-top: 50px;
+  margin-left: 10px; 
+}
+
+#sort_links{
+  margin-left: 10px;
+}
+
+#mainpage{
+  margin-left: 20px;
+}
+
+.destinations{
+  // position: fixed;
+  top: 70px;
+  // height: 100%;
+  width: 60%;
 }

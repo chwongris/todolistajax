@@ -6,31 +6,34 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript"
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoq442HK7KTs93L4yBtjs1Sb8evEPpWIE&sensor=false">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGWlVKhl5vwogbFLmGgZF5-EIh3WUfg-8&sensor=false">
   </script>
   <script type="text/javascript">
-  function initialize() {
-    var myLatlng = new google.maps.LatLng(40.7509915, -73.9888797);
 
-    var mapOptions = {
-      center: myLatlng,
-      zoom: 12,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map-canvas"),
-      mapOptions);
+    $(document).ready(function() {
+    initMap();
 
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title:"Hello World!"
-    });
+    items = <%= raw(ToDoItem.all.to_json) %>;
 
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
+    <% ToDoItem.all.each do |item| %>
+    addMarker(<%= item.latitude %>,<%= item.longitude %>,'<%= item.name %>');
+    <% end %>
+
+   
+
+    // var marker = new google.maps.Marker({
+    //   position: myLatlng,
+    //   map: map,
+    //   title:"Hello World!"
+    // });
+
+  });
   </script>
 </head>
 <body>
+<div id="header">
+<h1 id="logo">Bucketlist</h1>
+</div>
 
   <%= yield %>
 

@@ -1,12 +1,26 @@
-<div class="destination">
-<%= destination.name %>
-<div class="to_do_items-<%=destination.id%>"> 
+<div class="destination_sort" data-ar-id="<%= destination.id %>">
 
-<%= render :partial => 'to_do_items/form',  :locals => {:destination => destination.id} %>
+<div class="destination_name">
+<%= destination.name %>
+</div>
+
+<div class="to_do_items">
+
+<div id="searchbox">
+<input type='text' id='search' placeholder='Enter a search term...'/>
+</div>
+
+<div class="to_do_items-<%=destination.id%>">
 
   <% destination.to_do_items.each do |to_do_item| %>
   <%= render to_do_item %>
   <% end %>
+
+</div>
+
+<div class="new-item">
+<%= render :partial => 'to_do_items/form',  :locals => {:destination => destination.id} %>
+</div>
 
 </div>
 </div>

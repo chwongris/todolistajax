@@ -1,17 +1,10 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(document).ready(function() {
 
-// $(document).ready(function() {
+$('body').on("click", ".to_do_item", function() {
+   $(this).toggleClass('expandedItem', 400)
+   $(this).children('.comments').toggle("fade");
+   console.log("hi");
+});
 
-//   $('body').bind('ajax:success', function(e, data) {
+});
 
-//     var itemId = $('<div>').append(data).children().first().data("item-id");
-//     if(itemId == undefined){
-//      $('.new-item').append(data);
-//    } else{
-
-//    };
-    
-//   });
-
-// });
